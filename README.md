@@ -23,3 +23,5 @@ the classes dynamically change on the highlight ```div```. Freezing and
 unfreezing the state works perfectly fine (play→pause→play), but there
 are still some issues with seeking. I'm trying to fix those in the
 next couple of days. Looking forward to any feedback you may have.
+
+![Screenshot showing the auto-generated CSS transitions](https://raw.githubusercontent.com/tomayac/dynamic-media-fragments/gh-pages/screenshot.png)
