@@ -119,7 +119,8 @@
         currentStyle[property] = div.style[property];
       }
       frozenStyle = getComputedStyle(div);
-      for (var property in frozenStyle) {
+      for (var i = 0, lenI = frozenStyle.length; i < lenI; i++) {
+        var property = frozenStyle[i];
         div.style[property] = frozenStyle[property];
       }
     });
@@ -130,7 +131,8 @@
     video.addEventListener('play', function() {
       console.log('play');
       div.classList.remove(video.id + '_no-transition');
-      for (var property in frozenStyle) {
+      for (var i = 0, lenI = frozenStyle.length; i < lenI; i++) {
+        var property = frozenStyle[i];
         if (!currentStyle[property]) {
           div.style.removeProperty(property);
         }
