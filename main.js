@@ -138,7 +138,9 @@
           div.style.removeProperty(property);
         }
       }
+      console.log(currentStyle);
       for (var property in currentStyle) {
+        console.log(property);
         div.style[property] = currentStyle[property];
       }
     });
@@ -156,7 +158,9 @@
           div.style.removeProperty(property);
         }
       }
+      console.log(currentStyle);
       for (var property in currentStyle) {
+        console.log(property);
         div.style[property] = currentStyle[property];
       }
       div.classList.add(video.id + '_no-transition');
