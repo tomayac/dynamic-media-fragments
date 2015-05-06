@@ -121,6 +121,7 @@
       frozenStyle = getComputedStyle(div);
       for (var i = 0, lenI = frozenStyle.length; i < lenI; i++) {
         var property = frozenStyle[i];
+        console.log(property);
         div.style[property] = frozenStyle[property];
       }
     });
@@ -147,7 +148,10 @@
   function addSeekedListener(video, div, currentStyle) {
     video.addEventListener('seeked', function() {
       console.log('seeked');
-      for (var property in getComputedStyle(video)) {
+      var frozenStyle = getComputedStyle(video);
+      for (var i = 0, lenI = frozenStyle.length; i < lenI; i++) {
+        var property = frozenStyle[i];
+        console.log(property);
         if (!currentStyle[property]) {
           div.style.removeProperty(property);
         }
